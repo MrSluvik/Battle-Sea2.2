@@ -36,7 +36,7 @@ public:
 	void printPoleGame(Player& players, Pole& poles);//друк пол€ бою дл€ першого гравц€
 	void printPoleGames(Player& playerq, Pole& poleq);	//друк пол€ бою дл€ другого гравц€	
 
-	bool getAmount();//метод перев≥рки к≥лькост≥ поставлених кораблик≥в
-	bool getShot(Player& playe, Pole& pol);//метод перев≥рки чи вистр≥л попав у карабель
+	bool getAmount();//метод перев≥рки к≥лькост≥ поставлених палуб кораблик≥в
+	bool getShot(Player& playe, Pole& pol);//метод перев≥рки чи вистр≥л попав у палубу карабл€
 	bool getWinner();//метод перев≥рки хто виграв
 };

@@ -1,6 +1,7 @@
 #include "Player.h"
 #include <iostream>
-Pole::Pole() {
+
+Pole::Pole() {//створення поля
 	this->n = 11;
 	this->m = 11;
 	this->matrix = nullptr;
@@ -19,7 +20,7 @@ Pole::Pole() {
 	}
 }
 
-void Pole::printPole(Player& player) {
+void Pole::printPole(Player& player) {//друк поля під час розтановки караблів
 	char arr[11]{ '-','A', 'B', 'C','D','E','F','G','H','I','J' };
 	int x = player.getX();
 	int y = player.getY();
@@ -39,7 +40,7 @@ void Pole::printPole(Player& player) {
 	}
 }
 
-void Pole::printPole(int x, int y, char ch)
+void Pole::printPole(int x, int y, char ch)//друк поля під час руху по ньому
 {
 	char arr[11]{ '-','A', 'B', 'C','D','E','F','G','H','I','J' };
 	if (getAmount() == true) {}
@@ -143,7 +144,7 @@ void Pole::printPoleGames(Player& playerq, Pole& poleq)////друк поля бою для дру
 	}
 }
 
-bool Pole::getAmount()
+bool Pole::getAmount()//метод перевірки кількості поставлених палуб корабликів
 {
 	int value = 0;
 	for (int i = 0; i < n; i++)
@@ -161,7 +162,7 @@ bool Pole::getAmount()
 	return false;
 }
 
-bool Pole::getShot(Player& playe, Pole& pol)
+bool Pole::getShot(Player& playe, Pole& pol)//метод перевірки чи вистріл попав у палубу карабля
 {
 	int x = playe.getX();
 	int y = playe.getY();
@@ -174,7 +175,7 @@ bool Pole::getShot(Player& playe, Pole& pol)
 	}	
 }
 
-bool Pole::getWinner()
+bool Pole::getWinner()//метод перевірки хто виграв
 {
 	int sum = 0;
 	int sum2 = 0;
